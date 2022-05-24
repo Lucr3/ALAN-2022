@@ -1,0 +1,60 @@
+Tutti gli esercizi sono stati svolti in linguaggio C++ dal gruppo così composto:
+Fazio Aurora, matricola 4353010;
+Polizzi Lucrezia, matricola 4935449;
+Raffaghello Tommaso, matricola 4978613;
+
+Il primo esercizio richiede di creare un programma che calcoli la somma di variabili imponendo una precedenza attravero l'uso delle parentesi, il tutto utilizzando variabili double per eseguire i calcoli richiesti in aritmetica a doppia precisione.
+
+I valori delle variabili dipendono dalle matricole dei componenti del gruppo, nel nostro caso abbriamo che d₀ è uguale a 0 e d₁ è uguale a 1.
+
+Abbiamo deciso di calcolare per prima cosa i valori di b e c, in quanto sono valori che rimangono invariati per tutta la durata dell'esercizio.
+Per calcolare 10^20 abbiamo utilizzato la funzione "pow" (includendo la libreria "cmath") dichiarando una variabile: "esp", successivamente abbiamo calcolato la variabile b utilizzando d₁ sommata di uno e il valore di esp.
+Dal valore della variabile b abbiamo ricavato anche la variabile c necessaria per le operazioni richieste dall'esercizio.
+Nel nostro caso i valori di b e c sono:
+b = 2e+20
+c = -2e+20
+
+Per fare il calcolo delle operazioni abbiamo utilizzato un for al cui interno abbiamo inserito il calcolo del valore di a (che dipendeva dal calcolo del valore 10^i, con i il numero di ripetizioni) e successivamente il calcolo delle operazioni richieste.
+Abbiamo inoltre deciso di stampare anche i valori di ritrno delle varie operazioni nel corso del ciclo for.
+Ecco i risultati:
+a = 1
+exp =1
+Con i = 0
+Operazione uno: 0
+Operazione due: 1
+a = 10
+exp =10
+Con i = 1
+Operazione uno: 0
+Operazione due: 10
+a = 100
+exp =100
+Con i = 2
+Operazione uno: 0
+Operazione due: 100
+a = 1000
+exp =1000
+Con i = 3
+Operazione uno: 0
+Operazione due: 1000
+a = 10000
+exp =10000
+Con i = 4
+Operazione uno: 0
+Operazione due: 10000
+a = 100000
+exp =100000
+Con i = 5
+Operazione uno: 98304
+Operazione due: 100000
+a = 1e+06
+exp =1e+06
+Con i = 6
+Operazione uno: 1.01581e+06
+Operazione due: 1e+06
+
+La prima operazione dà quel risultato perché con esponente pari a 0, qualsiasi numero da come risultato 1, di conseguenza 
+(a+b)+c in doppia precisione di macchina mi darà un valore di ritorno pari a 1, mentre a+(b+c) darà come valore di ritorno 0, in quanto le parentesi forzano la precedenza delle operazioni da svolgere.
+Ad ogni i, il calcolo è lo stesso per entrambe le operazioni da fare.
+
+
